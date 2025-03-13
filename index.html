@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barclaysman Daily Quiz</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        #player-image {
+            max-width: 300px;
+            margin-top: 20px;
+        }
+        .guess-result {
+            margin-top: 10px;
+        }
+        .incorrect-guess {
+            color: red;
+        }
+        .correct-guess {
+            color: green;
+        }
+        #share-link {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Barclaysman Daily Quiz</h1>
+    <p>Guess the Premier League player based on the clubs they played for.</p>
+    <div id="clubs"></div>
+    <input type="text" id="guess-input" placeholder="Enter your guess">
+    <button id="guess-button">Guess</button>
+    <div id="guess-results"></div>
+    <div id="player-image"></div>
+    <div id="player-bio"></div>
+    <div id="share-link"></div>
+
+    <script>
+        const players = [
+            {
+        name: "Alan Shearer",
+        clubs: ["Southampton", "Blackburn Rovers", "Newcastle United"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Alan_Shearer_BT_Sport.jpg/330px-Alan_Shearer_BT_Sport.jpg",
+        bio: "Alan Shearer is the Premier League's all-time top scorer."
+    },
+    {
+        name: "Thierry Henry",
+        clubs: ["Monaco", "Juventus", "Arsenal", "Barcelona", "New York Red Bulls"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Thierry_Henry_2011.jpg/330px-Thierry_Henry_2011.jpg",
+        bio: "Thierry Henry was a legendary Arsenal striker."
+    },
+    {
+        name: "Frank Lampard",
+        clubs: ["West Ham United", "Chelsea", "Manchester City", "New York City FC"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Frank_Lampard_2012.jpg/330px-Frank_Lampard_2012.jpg",
+        bio: "Frank Lampard is one of Chelsea's greatest players."
+    },
+    {
+        name: "Steven Gerrard",
+        clubs: ["Liverpool", "LA Galaxy"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Steven_Gerrard_2011.jpg/330px-Steven_Gerrard_2011.jpg",
+        bio: "Steven Gerrard was a Liverpool icon."
+    },
+    {
+        name: "Wayne Rooney",
+        clubs: ["Everton", "Manchester United", "DC United", "Derby County"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wayne_Rooney_2018.jpg/330px-Wayne_Rooney_2018.jpg",
+        bio: "Wayne Rooney is Manchester United's all-time top scorer."
+    },
+    {
+        name: "Cristiano Ronaldo",
+        clubs: ["Sporting CP", "Manchester United", "Real Madrid", "Juventus", "Al Nassr"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/330px-Cristiano_Ronaldo_2018.jpg",
+        bio: "Cristiano Ronaldo is a global football superstar."
+    },
+    {
+        name: "Dennis Bergkamp",
+        clubs: ["Ajax", "Inter Milan", "Arsenal"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Dennis_Bergkamp_2014.jpg/330px-Dennis_Bergkamp_2014.jpg",
+        bio: "Dennis Bergkamp was an Arsenal legend."
+    },
+    {
+        name: "Patrick Vieira",
+        clubs: ["Cannes", "AC Milan", "Arsenal", "Juventus", "Inter Milan", "Manchester City"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Patrick_Vieira_2011.jpg/330px-Patrick_Vieira_2011.jpg",
+        bio: "Patrick Vieira was a dominant midfielder."
+    },
+    {
+        name: "Rio Ferdinand",
+        clubs: ["West Ham United", "Leeds United", "Manchester United", "Queens Park Rangers"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Rio_Ferdinand_2012.jpg/330px-Rio_Ferdinand_2012.jpg",
+        bio: "Rio Ferdinand was a commanding centre-back."
+    },
+    {
+        name: "John Terry",
+        clubs: ["Chelsea", "Aston Villa"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/John_Terry_2012.jpg/330px-John_Terry_2012.jpg",
+        bio: "John Terry was a Chelsea stalwart."
+    },
+    {
+        name: "Didier Drogba",
+        clubs: ["Levallois", "Le Mans", "Guingamp", "Marseille", "Chelsea", "Shanghai Shenhua", "Galatasaray", "Montreal Impact", "Phoenix Rising"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Didier_Drogba_2012.jpg/330px-Didier_Drogba_2012.jpg",
+        bio: "Didier Drogba was a powerful striker."
+    },
+    {
+        name: "Peter Schmeichel",
+        clubs: ["Gladsaxe-Hero", "Hvidovre", "Brøndby", "Manchester United", "Sporting CP", "Aston Villa", "Manchester City"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Peter_Schmeichel_2012.jpg/330px-Peter_Schmeichel_2012.jpg",
+        bio: "Peter Schmeichel was a legendary goalkeeper."
+    },
+    {
+        name: "Roy Keane",
+        clubs: ["Cobh Ramblers", "Nottingham Forest", "Manchester United"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Roy_Keane_2012.jpg/330px-Roy_Keane_2012.jpg",
+        bio: "Roy Keane was a combative midfielder."
+    },
+    {
+        name: "David Beckham",
+        clubs: ["Manchester United", "Preston North End", "Real Madrid", "LA Galaxy", "AC Milan", "Paris Saint-Germain"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/David_Beckham_2012.jpg/330px-David_Beckham_2012.jpg",
+        bio: "David Beckham was a global icon."
+    },
+    {
+        name: "Michael Owen",
+        clubs: ["Liverpool", "Real Madrid", "Newcastle United", "Manchester United", "Stoke City"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Michael_Owen_2012.jpg/330px-Michael_Owen_2012.jpg",
+        bio: "Michael Owen was a prolific striker."
+    },
+    {
+        name: "Jamie Carragher",
+        clubs: ["Liverpool"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Jamie_Carragher_2012.jpg/330px-Jamie_Carragher_2012.jpg",
+        bio: "Jamie Carragher was a Liverpool stalwart."
+    },
+    {
+        name: "Sol Campbell",
+        clubs: ["Tottenham Hotspur", "Arsenal", "Portsmouth", "Notts County", "Newcastle United"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Sol_Campbell_2012.jpg/330px-Sol_Campbell_2012.jpg",
+        bio: "Sol Campbell was a commanding centre-back."
+    },
+    {
+        name: "Paul Scholes",
+        clubs: ["Manchester United"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Paul_Scholes_2012.jpg/330px-Paul_Scholes_2012.jpg",
+        bio: "Paul Scholes was a technically gifted midfielder."
+    },
+    {
+        name: "Gareth Bale",
+        clubs: ["Southampton", "Tottenham Hotspur", "Real Madrid", "Los Angeles FC"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Gareth_Bale_2018.jpg/330px-Gareth_Bale_2018.jpg",
+        bio: "Gareth Bale was a dynamic winger."
+    },
+        {
+        name: "Sergio Agüero",
+        clubs: ["Independiente", "Atlético Madrid", "Manchester City", "Barcelona"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Sergio_Ag%C3%BCero_2012.jpg/330px-Sergio_Ag%C3%BCero_2012.jpg",
+        bio: "Sergio Agüero was a prolific striker."
+    } 
+];
+
+        let targetPlayer;
+        let guesses = 0;
+        let guessedCorrectly = false;
+
+        function pickRandomPlayer() {
+            const today = new Date();
+            const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+            targetPlayer = players[dayOfYear % players.length];
+            document.getElementById("clubs").textContent = "Clubs: " + targetPlayer.clubs.join(", ");
+        }
+
+        function handleGuess() {
+            if (guessedCorrectly) return;
+            const guess = document.getElementById("guess-input").value.trim();
+            guesses++;
+
+            const lastName = targetPlayer.name.split(" ").pop().toLowerCase();
+            if (guess.toLowerCase() === targetPlayer.name.toLowerCase() || guess.toLowerCase() === lastName) {
+                guessedCorrectly = true;
+                document.getElementById("guess-results").innerHTML += `<span class="correct-guess">✅ Correct!</span><br>`;
+                displayPlayerInfo();
+                displayShareLink();
+            } else {
+                document.getElementById("guess-results").innerHTML += `<span class="incorrect-guess">❌ Incorrect.</span><br>`;
+                if (guesses >= 5) {
+                    displayPlayerInfo();
+                    displayShareLink();
+                }
+            }
+
+            document.getElementById("guess-input").value = "";
+        }
+
+        function displayPlayerInfo() {
+            document.getElementById("player-image").innerHTML = `<img src="${targetPlayer.image}" alt="${targetPlayer.name}">`;
+            document.getElementById("player-bio").textContent = targetPlayer.bio;
+        }
+
+        function displayShareLink() {
+            let scoreMessage = "";
+            if (guessedCorrectly) {
+                scoreMessage = `I guessed in ${guesses}/5 attempts! `;
+            } else {
+                scoreMessage = `I couldn't guess in 5 attempts. `;
+            }
+
+            const shareText = `${scoreMessage}Share your score and challenge your friends to the 'Barclaysman Daily Quiz'!`;
+            const whatsappLink = `whatsapp://send?text=${encodeURIComponent(shareText + " " + window.location.href)}`;
+            document.getElementById("share-link").innerHTML = `<a href="${whatsappLink}" target="_blank">Share on WhatsApp</a>`;
+        }
+
+        function resetGame() {
+            guesses = 0;
+            guessedCorrectly = false;
+            document.getElementById("guess-results").innerHTML = "";
+            document.getElementById("player-image").innerHTML = "";
+            document.getElementById("player-bio").textContent = "";
+            document.getElementById("share-link").innerHTML = "";
+            pickRandomPlayer();
+        }
+
+        // Initialize the game
+        pickRandomPlayer();
+
+        // Add event listener to the guess button
+        document.getElementById("guess-button").addEventListener("click", handleGuess);
+
+    </script>
+</body>
+</html>
