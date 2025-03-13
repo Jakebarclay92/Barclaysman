@@ -42,124 +42,208 @@
     <script>
         const players = [
             {
-        name: "Alan Shearer",
-        clubs: ["Southampton", "Blackburn Rovers", "Newcastle United"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Alan_Shearer_BT_Sport.jpg/330px-Alan_Shearer_BT_Sport.jpg",
-        bio: "Alan Shearer is the Premier League's all-time top scorer."
+        name: "Matt Le Tissier",
+        clubs: ["Southampton"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Matt_Le_Tissier_2012.jpg/330px-Matt_Le_Tissier_2012.jpg",
+        bio: "Le Tissier was a Southampton legend, known for his incredible goals."
     },
     {
-        name: "Thierry Henry",
-        clubs: ["Monaco", "Juventus", "Arsenal", "Barcelona", "New York Red Bulls"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Thierry_Henry_2011.jpg/330px-Thierry_Henry_2011.jpg",
-        bio: "Thierry Henry was a legendary Arsenal striker."
+        name: "Paolo Di Canio",
+        clubs: ["Lazio", "Juventus", "Napoli", "AC Milan", "Celtic", "Sheffield Wednesday", "West Ham United", "Charlton Athletic"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Paolo_Di_Canio_2012.jpg/330px-Paolo_Di_Canio_2012.jpg",
+        bio: "Di Canio was a charismatic and controversial striker."
     },
     {
-        name: "Frank Lampard",
-        clubs: ["West Ham United", "Chelsea", "Manchester City", "New York City FC"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Frank_Lampard_2012.jpg/330px-Frank_Lampard_2012.jpg",
-        bio: "Frank Lampard is one of Chelsea's greatest players."
+        name: "Juninho Paulista",
+        clubs: ["São Paulo", "Middlesbrough", "Atlético Madrid", "Vasco da Gama", "Flamengo", "Celtic", "Palmeiras", "Sydney FC", "Ituano"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Juninho_Paulista_2012.jpg/330px-Juninho_Paulista_2012.jpg",
+        bio: "Juninho was a Middlesbrough hero, known for his flair."
     },
     {
-        name: "Steven Gerrard",
-        clubs: ["Liverpool", "LA Galaxy"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Steven_Gerrard_2011.jpg/330px-Steven_Gerrard_2011.jpg",
-        bio: "Steven Gerrard was a Liverpool icon."
+        name: "Jay-Jay Okocha",
+        clubs: ["Enugu Rangers", "Borussia Neunkirchen", "Eintracht Frankfurt", "Fenerbahçe", "Paris Saint-Germain", "Bolton Wanderers", "Hull City"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Jay-Jay_Okocha_2012.jpg/330px-Jay-Jay_Okocha_2012.jpg",
+        bio: "Okocha was a skillful and entertaining midfielder."
     },
     {
-        name: "Wayne Rooney",
-        clubs: ["Everton", "Manchester United", "DC United", "Derby County"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wayne_Rooney_2018.jpg/330px-Wayne_Rooney_2018.jpg",
-        bio: "Wayne Rooney is Manchester United's all-time top scorer."
+        name: "Tim Cahill",
+        clubs: ["Millwall", "Everton", "New York Red Bulls", "Shanghai Shenhua", "Melbourne City", "Jamshedpur"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Tim_Cahill_2012.jpg/330px-Tim_Cahill_2012.jpg",
+        bio: "Cahill was an Everton icon, known for his headers."
     },
     {
-        name: "Cristiano Ronaldo",
-        clubs: ["Sporting CP", "Manchester United", "Real Madrid", "Juventus", "Al Nassr"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/330px-Cristiano_Ronaldo_2018.jpg",
-        bio: "Cristiano Ronaldo is a global football superstar."
+        name: "Kevin Davies",
+        clubs: ["Chesterfield", "Southampton", "Blackburn Rovers", "Millwall", "Bolton Wanderers", "Preston North End"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Kevin_Davies_2012.jpg/330px-Kevin_Davies_2012.jpg",
+        bio: "Davies was a physical and hardworking striker."
     },
     {
-        name: "Dennis Bergkamp",
-        clubs: ["Ajax", "Inter Milan", "Arsenal"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Dennis_Bergkamp_2014.jpg/330px-Dennis_Bergkamp_2014.jpg",
-        bio: "Dennis Bergkamp was an Arsenal legend."
+        name: "Ricardo Gardner",
+        clubs: ["Harbour View", "Bolton Wanderers"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Ricardo_Gardner_2012.jpg/330px-Ricardo_Gardner_2012.jpg",
+        bio: "Gardner was a versatile and loyal Bolton player."
     },
     {
-        name: "Patrick Vieira",
-        clubs: ["Cannes", "AC Milan", "Arsenal", "Juventus", "Inter Milan", "Manchester City"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Patrick_Vieira_2011.jpg/330px-Patrick_Vieira_2011.jpg",
-        bio: "Patrick Vieira was a dominant midfielder."
+        name: "Geovanni",
+        clubs: ["Cruzeiro", "Barcelona", "Benfica", "Manchester City", "Hull City", "San Jose Earthquakes", "Vitória"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Geovanni_2012.jpg/330px-Geovanni_2012.jpg",
+        bio: "Geovanni was a skillful attacking midfielder."
     },
     {
-        name: "Rio Ferdinand",
-        clubs: ["West Ham United", "Leeds United", "Manchester United", "Queens Park Rangers"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Rio_Ferdinand_2012.jpg/330px-Rio_Ferdinand_2012.jpg",
-        bio: "Rio Ferdinand was a commanding centre-back."
+        name: "Titus Bramble",
+        clubs: ["Ipswich Town", "Newcastle United", "Wigan Athletic", "Sunderland"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Titus_Bramble_2012.jpg/330px-Titus_Bramble_2012.jpg",
+        bio: "Bramble was a powerful but inconsistent defender."
     },
     {
-        name: "John Terry",
-        clubs: ["Chelsea", "Aston Villa"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/John_Terry_2012.jpg/330px-John_Terry_2012.jpg",
-        bio: "John Terry was a Chelsea stalwart."
+        name: "Ali Al-Habsi",
+        clubs: ["Al-Mudhaibi", "Lyn Oslo", "Bolton Wanderers", "Wigan Athletic", "Reading", "West Bromwich Albion", "Al-Hilal"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Ali_Al-Habsi_2012.jpg/330px-Ali_Al-Habsi_2012.jpg",
+        bio: "Al-Habsi was a reliable and popular goalkeeper."
     },
     {
-        name: "Didier Drogba",
-        clubs: ["Levallois", "Le Mans", "Guingamp", "Marseille", "Chelsea", "Shanghai Shenhua", "Galatasaray", "Montreal Impact", "Phoenix Rising"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Didier_Drogba_2012.jpg/330px-Didier_Drogba_2012.jpg",
-        bio: "Didier Drogba was a powerful striker."
+        name: "Clint Dempsey",
+        clubs: ["New England Revolution", "Fulham", "Tottenham Hotspur", "Seattle Sounders FC"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Clint_Dempsey_2012.jpg/330px-Clint_Dempsey_2012.jpg",
+        bio: "Dempsey was a prolific American forward."
     },
     {
-        name: "Peter Schmeichel",
-        clubs: ["Gladsaxe-Hero", "Hvidovre", "Brøndby", "Manchester United", "Sporting CP", "Aston Villa", "Manchester City"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Peter_Schmeichel_2012.jpg/330px-Peter_Schmeichel_2012.jpg",
-        bio: "Peter Schmeichel was a legendary goalkeeper."
+        name: "Ivan Campo",
+        clubs: ["Valencia", "Real Valladolid", "Real Madrid", "Mallorca", "Bolton Wanderers", "Ipswich Town", "AEK Larnaca"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Ivan_Campo_2012.jpg/330px-Ivan_Campo_2012.jpg",
+        bio: "Campo was a charismatic and versatile defender."
     },
     {
-        name: "Roy Keane",
-        clubs: ["Cobh Ramblers", "Nottingham Forest", "Manchester United"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Roy_Keane_2012.jpg/330px-Roy_Keane_2012.jpg",
-        bio: "Roy Keane was a combative midfielder."
+        name: "Habib Beye",
+        clubs: ["Stade de Mbour", "Istres", "Strasbourg", "Marseille", "Newcastle United", "Aston Villa", "Doncaster Rovers"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Habib_Beye_2012.jpg/330px-Habib_Beye_2012.jpg",
+        bio: "Beye was a passionate and reliable defender."
     },
     {
-        name: "David Beckham",
-        clubs: ["Manchester United", "Preston North End", "Real Madrid", "LA Galaxy", "AC Milan", "Paris Saint-Germain"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/David_Beckham_2012.jpg/330px-David_Beckham_2012.jpg",
-        bio: "David Beckham was a global icon."
+        name: "Ben Thatcher",
+        clubs: ["Millwall", "Wimbledon", "Tottenham Hotspur", "Leicester City", "Manchester City", "Charlton Athletic"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Ben_Thatcher_2012.jpg/330px-Ben_Thatcher_2012.jpg",
+        bio: "Thatcher was a tough-tackling defender."
+    },
+{
+        name: "Robin van Persie",
+        clubs: ["Feyenoord", "Arsenal", "Manchester United"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Robin_van_Persie_2013.jpg/330px-Robin_van_Persie_2013.jpg",
+        bio: "Van Persie was a prolific striker known for his exceptional technique."
     },
     {
-        name: "Michael Owen",
-        clubs: ["Liverpool", "Real Madrid", "Newcastle United", "Manchester United", "Stoke City"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Michael_Owen_2012.jpg/330px-Michael_Owen_2012.jpg",
-        bio: "Michael Owen was a prolific striker."
+        name: "Nemanja Vidić",
+        clubs: ["Red Star Belgrade", "Spartak Moscow", "Manchester United"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Nemanja_Vidi%C4%87_2012.jpg/330px-Nemanja_Vidi%C4%87_2012.jpg",
+        bio: "Vidić was a commanding and uncompromising centre-back."
     },
     {
-        name: "Jamie Carragher",
-        clubs: ["Liverpool"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Jamie_Carragher_2012.jpg/330px-Jamie_Carragher_2012.jpg",
-        bio: "Jamie Carragher was a Liverpool stalwart."
+        name: "Yaya Touré",
+        clubs: ["Beveren", "Metalurh Donetsk", "Olympiacos", "Monaco", "Barcelona", "Manchester City"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Yaya_Tour%C3%A9_2014.jpg/330px-Yaya_Tour%C3%A9_2014.jpg",
+        bio: "Touré was a powerful and dynamic midfielder with exceptional technique."
     },
     {
-        name: "Sol Campbell",
-        clubs: ["Tottenham Hotspur", "Arsenal", "Portsmouth", "Notts County", "Newcastle United"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Sol_Campbell_2012.jpg/330px-Sol_Campbell_2012.jpg",
-        bio: "Sol Campbell was a commanding centre-back."
+        name: "Luis Suárez",
+        clubs: ["Nacional", "Groningen", "Ajax", "Liverpool", "Barcelona"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Luis_Su%C3%A1rez_2014.jpg/330px-Luis_Su%C3%A1rez_2014.jpg",
+        bio: "Suárez was a highly skilled and controversial striker."
     },
     {
-        name: "Paul Scholes",
-        clubs: ["Manchester United"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Paul_Scholes_2012.jpg/330px-Paul_Scholes_2012.jpg",
-        bio: "Paul Scholes was a technically gifted midfielder."
+        name: "Eden Hazard",
+        clubs: ["Lille", "Chelsea", "Real Madrid"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Eden_Hazard_2015.jpg/330px-Eden_Hazard_2015.jpg",
+        bio: "Hazard was a creative and skillful winger with exceptional dribbling ability."
     },
     {
-        name: "Gareth Bale",
-        clubs: ["Southampton", "Tottenham Hotspur", "Real Madrid", "Los Angeles FC"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Gareth_Bale_2018.jpg/330px-Gareth_Bale_2018.jpg",
-        bio: "Gareth Bale was a dynamic winger."
+        name: "Cesc Fàbregas",
+        clubs: ["Barcelona", "Arsenal", "Barcelona", "Chelsea", "Monaco", "Como"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cesc_F%C3%A0bregas_2015.jpg/330px-Cesc_F%C3%A0bregas_2015.jpg",
+        bio: "Fàbregas was a technically gifted midfielder with excellent passing range."
     },
-        {
-        name: "Sergio Agüero",
-        clubs: ["Independiente", "Atlético Madrid", "Manchester City", "Barcelona"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Sergio_Ag%C3%BCero_2012.jpg/330px-Sergio_Ag%C3%BCero_2012.jpg",
-        bio: "Sergio Agüero was a prolific striker."
+    {
+        name: "Vincent Kompany",
+        clubs: ["Anderlecht", "Hamburg", "Manchester City"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Vincent_Kompany_2012.jpg/330px-Vincent_Kompany_2012.jpg",
+        bio: "Kompany was a strong and reliable centre-back and leader."
+    },
+    {
+        name: "Gareth Barry",
+        clubs: ["Aston Villa", "Manchester City", "Everton", "West Bromwich Albion"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Gareth_Barry_2013.jpg/330px-Gareth_Barry_2013.jpg",
+        bio: "Barry was a consistent and versatile midfielder with a long Premier League career."
+    },
+    {
+        name: "Carlos Tevez",
+        clubs: ["Boca Juniors", "Corinthians", "West Ham United", "Manchester United", "Manchester City", "Juventus", "Boca Juniors", "Shanghai Shenhua"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Carlos_Tevez_2012.jpg/330px-Carlos_Tevez_2012.jpg",
+        bio: "Tevez was a hardworking and tenacious striker."
+    },
+    {
+        name: "David Silva",
+        clubs: ["Valencia", "Eibar", "Celta Vigo", "Manchester City", "Real Sociedad"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/David_Silva_2014.jpg/330px-David_Silva_2014.jpg",
+        bio: "Silva was a creative and skillful attacking midfielder."
+    },
+    {
+        name: "Petr Čech",
+        clubs: ["Chmel Blšany", "Sparta Prague", "Rennes", "Chelsea", "Arsenal"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Petr_%C4%8Cech_2015.jpg/330px-Petr_%C4%8Cech_2015.jpg",
+        bio: "Čech was a reliable and accomplished goalkeeper."
+    },
+    {
+        name: "Michael Carrick",
+        clubs: ["West Ham United", "Tottenham Hotspur", "Manchester United"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Michael_Carrick_2012.jpg/330px-Michael_Carrick_2012.jpg",
+        bio: "Carrick was a composed and intelligent midfielder."
+    },
+    {
+        name: "Santi Cazorla",
+        clubs: ["Villarreal", "Recreativo", "Málaga", "Arsenal", "Villarreal", "Al Sadd"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Santi_Cazorla_2015.jpg/330px-Santi_Cazorla_2015.jpg",
+        bio: "Cazorla was a technically gifted and versatile midfielder."
+    },
+    {
+        name: "Fernandinho",
+        clubs: ["Corinthians", "Shakhtar Donetsk", "Manchester City", "Athletico Paranaense"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Fernandinho_2014.jpg/330px-Fernandinho_2014.jpg",
+        bio: "Fernandinho was a hardworking and combative defensive midfielder."
+    },
+    {
+        name: "Daniel Sturridge",
+        clubs: ["Manchester City", "Chelsea", "Bolton Wanderers", "Liverpool", "West Bromwich Albion", "Trabzonspor", "Perth Glory"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Daniel_Sturridge_2014.jpg/330px-Daniel_Sturridge_2014.jpg",
+        bio: "Sturridge was a skillful and clinical striker when fit."
+    },
+    {
+        name: "Christian Eriksen",
+        clubs: ["Ajax", "Tottenham Hotspur", "Inter Milan", "Brentford", "Manchester United"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Christian_Eriksen_2014.jpg/330px-Christian_Eriksen_2014.jpg",
+        bio: "Eriksen is a creative and technically gifted midfielder."
+    },
+    {
+        name: "Mesut Özil",
+        clubs: ["Schalke 04", "Werder Bremen", "Real Madrid", "Arsenal", "Fenerbahçe", "İstanbul Başakşehir"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Mesut_%C3%96zil_2015.jpg/330px-Mesut_%C3%96zil_2015.jpg",
+        bio: "Özil was a creative and skillful attacking midfielder."
+    },
+    {
+        name: "Henri Camara",
+        clubs: ["Strasbourg", "Neuchâtel Xamax", "Grasshopper", "Sedan", "Wolverhampton Wanderers", "Celtic", "Southampton", "Wigan Athletic", "Sheffield United", "West Ham United", "Atromitos", "Panetolikos"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Henri_Camara_2012.jpg/330px-Henri_Camara_2012.jpg",
+        bio: "Camara was a pacey and unpredictable striker."
+    },
+    {
+        name: "Kevin Nolan",
+        clubs: ["Bolton Wanderers", "Newcastle United", "West Ham United", "Leyton Orient", "Notts County"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Kevin_Nolan_2012.jpg/330px-Kevin_Nolan_2012.jpg",
+        bio: "Nolan was a hardworking and goalscoring midfielder."
+    },
+    {
+        name: "Jimmy Bullard",
+        clubs: ["Gravesend & Northfleet", "West Ham United", "Peterborough United", "Wigan Athletic", "Fulham", "Hull City", "Ipswich Town", "Milton Keynes Dons"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Jimmy_Bullard_2012.jpg/330px-Jimmy_Bullard_2012.jpg",
+        bio: "Bullard was a charismatic and entertaining midfielder."
     } 
 ];
 
